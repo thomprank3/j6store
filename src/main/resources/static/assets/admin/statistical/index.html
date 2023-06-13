@@ -1,0 +1,16 @@
+<ul class="nav nav-tabs" style="font-variant: small-caps;">
+    <li><a data-toggle="tab" data-target="#topUserBuying" href="">Top User Buying</a></li>
+    <li class="active"><a data-toggle="tab" data-target="#topProductBuying" href="">Top Product Buying</a></li>
+    <li><a data-toggle="tab" data-target="#topUserCancelledOrder" href="">Top User Cancelled Order</a></li>
+</ul>
+<div class="tab-content">
+    <div id="topUserBuying" class="tab-pane fade">
+        <div ng-include="'/assets/admin/statistical/_topUserBuying.html'"></div>
+    </div>
+    <div id="topProductBuying" class="tab-pane fade in active">
+        <div ng-include="'/assets/admin/statistical/_topProductBuying'"></div>
+    </div>
+    <div id="topUserCancelledOrder" class="tab-pane fade">
+        <div ng-include="'/assets/admin/statistical/_topUserCancelledOrder.html'"></div>
+    </div>
+</div>

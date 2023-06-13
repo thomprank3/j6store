@@ -1,0 +1,13 @@
+<div xmlns:th="http://www.thymeleaf.org">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <b class="glyphicon glyphicon-hourglass"></b> Bộ Lọc
+      </div>
+      <div class="list-group">
+        <a class="list-group-item" th:href="@{/product/list/zeroTofiftyDollar}">0-50$</a>
+        <a class="list-group-item" th:href="@{/product/list/fiftyToOneHundredDollar}">50-100$</a>
+        <a class="list-group-item" th:href="@{/product/list/OneHunderedToFiveHundredDollar}">100-500$</a>
+        <a class="list-group-item" th:href="@{/product/list/biggerThanFiveHundredDollar}">>500$</a>
+      </div>
+    </div>
+</div>

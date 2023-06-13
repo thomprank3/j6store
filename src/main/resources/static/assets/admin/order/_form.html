@@ -1,0 +1,42 @@
+<div class="panel panel-default">
+    <div class="panel-heading">ORDER EDITION</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <div>Order ID:</div>
+                        <input ng-model="form.id" class="form-control" readonly>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <div>Username:</div>
+                        <input ng-model="form.account.username" class="form-control" readonly>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <div>Address:</div>
+                        <input ng-model="form.address" class="form-control" readonly>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <div>Create Date:</div>
+                        <input ng-model="form.createDate" type="date" class="form-control" readonly>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-12">
+                        <label style="font-weight:100" for="status">Status</label>
+                        <select ng-model="form.status.id" class="form-control">
+                            <option ng-repeat= "s in statuses" ng-value="s.id">{{s.name}}</option>
+                        </select>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer text-center">
+        <button ng-click="update()" class="btn btn-success">
+            <b class="glyphicon glyphicon-save"></b> Update
+        </button>
+    </div>
+</div>

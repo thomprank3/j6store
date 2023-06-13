@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="dynamic(main)">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java 6 Store</title>
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/shopping-cart-app.css">
+    <!-- glyphicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="container" ng-app="shopping-cart-app" ng-controller="shopping-cart-ctrl">
+    <header class="row">
+        <img src="https://i.pinimg.com/originals/e6/ee/2a/e6ee2a5888b79c216ba21bc2ca6c8939.jpg" alt="banner">
+    </header>
+    <nav class="row">
+        <div th:replace="/layout/_menu.html"></div>
+    </nav>
+    <div class="row">
+        <article class="col-sm-9">
+            <div th:replace="${main}"></div>
+        </article>
+        <aside class="col-sm-3">
+            <div th:replace="/layout/_cart-info.html"></div>
+            <div th:replace="/layout/_category.html"></div>
+            <div th:replace="/layout/_filter.html"></div>
+            <div th:replace="/layout/_special.html"></div>
+        </aside>
+    </div>
+    <footer class="row text-center">
+        <hr>
+        <div class="text-center center-block">
+            <p class="txt-railway"><b>FPT Polytechnic Danang</b></p>
+            <br />
+            <a href="https://www.facebook.com/tran.vietthanh.902"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+            <a href="#"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+            <a href="#"><i id="social-gp"
+                    class="fa fa-google-plus-square fa-3x social"></i></a>
+            <a href="mailto:thanhtvpd03942@fpt.edu.vn"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+        </div>
+        <hr>
+    </footer>
+    <script src="/assets/js/shopping-cart-app.js"></script>
+    <script src="/templates/security/register-ctrl.js"></script>
+    <script src="/templates/security/edit-profile-ctrl.js"></script>
+</body>
+</html>

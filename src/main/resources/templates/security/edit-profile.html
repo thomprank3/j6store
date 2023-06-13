@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    th:replace="~{/layout/index :: dynamic(~{::main})}">
+    <body>
+        <main th:object="${account}" class="poly-item-detail">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <div>Username:</div>
+                            <input  class="form-control" th:text="*{username}">
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <div>Fullname:</div>
+                            <input  class="form-control" th:text="*{fullname}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <div>Email:</div>
+                            <input class="form-control" th:text="*{email}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
